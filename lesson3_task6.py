@@ -6,6 +6,13 @@ def convert_word(word: str):
     #print(f'convert_char: {convert_char}  type: {type(convert_char)}')
     return convert_char+word[1:]
 
+def convert_word_v2(word: str):
+    little_char_list = list(range('a', 'z'))
+    tile_char_list = list(range('A', 'Z'))
+    symbol_position = little_char_list.index(word[0])
+    result = tile_char_list[symbol_position]+word[1:]
+    return result
+
 def conver_words(words: str):
     final_word_list = ''
     for word in words.split():
